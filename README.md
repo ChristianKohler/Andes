@@ -2,7 +2,7 @@
 A library for creating React like components with ES6 / Custom Elements and virtual-dom.
 
 ## Example
-See all the examples in ./examples/
+See all the examples in ./examples/ or the todo app example on jsbin [TodoApp example](https://jsbin.com/dogija/1/edit?html,js,output)
 
 Write the component
 ```js
