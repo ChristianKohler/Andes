@@ -1,0 +1,29 @@
+{
+  "name": "andes",
+  "version": "0.0.1",
+  "description": "Custom Element Library with virtual dom support",
+  "main": "index.js",
+  "scripts": {
+    "start": "parallelshell \"npm run serve -s\" \"npm run watch -s\" \"npm run livereload -s\"",
+    "build": "browserify -s Andes -t babelify -g uglifyify -e index.js > dist/andes.js",
+    "watch": "watchify -s Andes -t babelify -e index.js -o examples/andes.js",
+    "serve": "http-server examples/",
+    "livereload": "live-reload --port 9092 examples/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christian Kohler <kohler.christian@gmail.com> (https://github.com/ChristianKohler)",
+  "license": "MIT",
+  "devDependencies": {
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
+    "http-server": "^0.8.0",
+    "live-reload": "^1.1.0",
+    "parallelshell": "^2.0.0",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.3.1"
+  },
+  "dependencies": {
+    "virtual-dom": "^2.1.1",
+    "virtual-html": "^1.3.0"
+  }
+}
