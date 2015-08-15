@@ -5,25 +5,25 @@ A library for creating React like components with ES6 / Custom Elements and virt
 See all the examples in ./examples/
 
 Write the component
-
-	class HelloWorld extends Andes.Component {
-		createdCallback() {
-			this.setState({ name: 'World' });
-		}
-		
-		render() {
-			return `
-				<h2>Hello ${this.state.name}</h2>
-			`;	
-		}
+```js
+class HelloWorld extends Andes.Component {
+	createdCallback() {
+		this.setState({ name: 'World' });
 	}
 	
-	Andes.AppRegistry.registerComponent('example-helloworld', () => HelloWorld);
+	render() {
+		return `
+			<h2>Hello ${this.state.name}</h2>
+		`;	
+	}
+}
 
+Andes.AppRegistry.registerComponent('example-helloworld', () => HelloWorld);
+```
 and then just add the newly created tag to you html file:
-
-	<example-helloworld></example-helloworld>
-
+```html
+<example-helloworld></example-helloworld>
+```
 ## Technologies & Libraries used
 * [custom-elements](http://w3c.github.io/webcomponents/spec/custom/)
 * [virtual-dom](https://github.com/Matt-Esch/virtual-dom)
